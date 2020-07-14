@@ -42,7 +42,7 @@ public class CelestialSphereEditor : Editor
     private void RandomChildren(CelestialSphere celestial)
     {
         Random r = new Random((int)DateTime.Now.Ticks);
-        for (int i = 0; i < celestial.Childrens.Count; i++)
+        for (int i = 0; i < celestial.children.Count; i++)
         {
             Vector3 d = Vector3.zero;
             var sign = r.Next(0, 2) > 0 ? 1 : -1;
@@ -53,20 +53,20 @@ public class CelestialSphereEditor : Editor
             d.z = sign * (float) r.NextDouble();
         
             var p = celestial.GetPointOnEllipsoid(d);
-            celestial.Childrens[i].transform.position =  p;
+            celestial.children[i].transform.position =  p;
         }
     }
     
     private void CollectChildren(CelestialSphere celestial)
     { 
-        if(celestial.Childrens==null)
-            celestial.Childrens =new List<Transform>();
-        celestial.Childrens.Clear();
+        if(celestial.children==null)
+            celestial.children =new List<Transform>();
+        celestial.children.Clear();
         var count =  celestial.transform.childCount;
         for (var i = 0; i < count; i++)
         {
             var c = celestial.transform.GetChild(i);
-            celestial.Childrens.Add(c);
+            celestial.children.Add(c);
         }
     }
 }
@@ -135,7 +135,7 @@ public class Ellipsoid
             var p1 = lineStart + ((-b - Mathf.Sqrt(s)) / a) * 0.5f*lineDir;
             return p0;
         }
-        if (s == 0)
+        if (Math.Abs(s) < 0.001f)
         {
             var p = lineStart + (-b / a) * 0.5f*lineDir;
             return p;
@@ -148,16 +148,16 @@ public class Ellipsoid
 [ExecuteInEditMode]
 public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
 {
-    public List<Transform> Childrens;
+    public List<Transform> children;
     
     [Tooltip("椭圆x轴半长轴")]
-    public float A;
+    public float axisA;
     [Tooltip("椭圆y轴半长轴")]
-    public float B;
+    public float axisB;
     [Tooltip("椭圆z轴半长轴")]
-    public float C;
+    public float axisC;
     [Tooltip("椭圆的旋转")]
-    public Vector3 Rotation;
+    public Vector3 rotation;
     [Tooltip("最近item的缩放大小")]
     public float maxScale = 1f;
     [Tooltip("最远item的缩放大小")]
@@ -198,68 +198,88 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     private bool _clickTurn = false;
     private bool _turnback = false;
 
-    public Ellipsoid Ellipsoid
+    private float _forwardDistance;
+    private Vector3 _nearPoint;
+    private Vector3 _farPoint;
+    
+    private Ellipsoid Ellipsoid
     {
         get
         {
             if(_ellipsoid==null)
-                _ellipsoid = new Ellipsoid(Vector3.zero, A * Vector3.right, B * Vector3.up,C * Vector3.forward,Rotation);
+                _ellipsoid = new Ellipsoid(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
             return _ellipsoid;
         }
     }
 
     void Awake()
     {
-       
+        PreParams();
         SortChildren();
     }
-    
+
+    /// <summary>
+    /// 预计算全局参数
+    /// </summary>
+    public void PreParams()
+    {
+        _nearPoint = GetPointOnEllipsoid(Forward);
+        _farPoint = GetPointOnEllipsoid(-1*Forward);
+        _forwardDistance = (_nearPoint - _farPoint).magnitude;
+    }
+
+    /// <summary>
+    /// 得到椭球体上一点
+    /// </summary>
+    /// <param name="dir"></param>
+    /// <returns></returns>
     public Vector3 GetPointOnEllipsoid(Vector3 dir)
     {
         return transform.position + Ellipsoid.CaculateLineIntersection(Vector3.zero, dir.normalized);
     }
     
+    /// <summary>
+    /// 计算节点的深度
+    /// </summary>
+    /// <param name="child"></param>
+    /// <returns></returns>
     private float ChildDepth(Transform child)
     {
         return Vector3.Dot(Forward,(child.position - transform.position));
     }
 
+    /// <summary>
+    /// 排序节点的前后顺序
+    /// </summary>
     private void SortChildren()
     {
-        if (Childrens != null && Childrens.Count > 0)
+        if (children != null && children.Count > 0)
         {
-             
-            Childrens.Sort((a,b) =>
+            children.Sort((a,b) =>
             {
-                if (ChildDepth(a) > ChildDepth(b))
-                {
-                    return 1;
-                }
-                if (ChildDepth(a) < ChildDepth(b))
-                {
-                    return -1;
-                }
-
-                return 0;
+                var d1 = ChildDepth(a);
+                var d2 = ChildDepth(b);
+                return d1 > d2 ? 1 : d1 < d2 ? -1 : 0;
             });
 
-            for (int i = 0; i < Childrens.Count; i++)
+            for (var i = 0; i < children.Count; i++)
             {
-                Transform child = Childrens[i];
-                var maxDistance = GetPointOnEllipsoid(Forward);
-                var minDistance = GetPointOnEllipsoid(-1*Forward);
-                var dis = maxDistance - minDistance;
-                var distance = Mathf.Abs(Vector3.Dot(Forward,(child.position - maxDistance)));
+                var child = children[i];
+                var distance = Mathf.Abs(Vector3.Dot(Forward,(child.position - _nearPoint)));
                 var max = ReferenceEquals(child,_clickObject) ? clickItemSize : maxScale;
-                Childrens[i].transform.localScale = Vector3.Lerp(Vector3.one*max, Vector3.one *minScale,distance/dis.magnitude);
-                Childrens[i].SetSiblingIndex(i);
+                children[i].transform.localScale = Vector3.Lerp(Vector3.one*max, Vector3.one *minScale,distance/_forwardDistance);
+                children[i].SetSiblingIndex(i);
             }
         }
     }
     
+    /// <summary>
+    /// 选中节点置前
+    /// </summary>
+    /// <param name="index"></param>
     public void TurnToFront(int index)
     {
-        Transform child = Childrens[index];
+        Transform child = children[index];
         TurnToFront(child);
     }
     
@@ -288,23 +308,19 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     {
         if (_clickTurn)
         {
+            if (_deltaQuaternion == Quaternion.identity)
+            {
+                return;
+            }
             var delta = Quaternion.Slerp(Quaternion.identity,_deltaQuaternion, turnRotationSpeed);
             _deltaQuaternion = Quaternion.Inverse(delta) * _deltaQuaternion;
-            for (int i = 0; i < Childrens.Count; i++)
-            {
-                Transform child = Childrens[i];
-                var vec = (child.position - transform.position).normalized;
-                var old = child.rotation;
-                var newrotation = old* Quaternion.Inverse(old) * delta * old;
-                Vector3 newVec = delta*vec;
-                child.position  = GetPointOnEllipsoid(newVec);
-            }
+            UpdateChildren(delta);
             _deltaRotation = Vector3.zero;
             SortChildren();
         }
         else
         {
-            if (_turnback && _clickObject != null)
+            if (_turnback && _clickObject)
             {
                 _localTime += Time.deltaTime;
                 var f = Mathf.Clamp(_localTime/clickTurnDuration,0, 1);
@@ -322,29 +338,28 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
                 if (_rotationDamping)
                 {
                     _deltaRotation = Vector3.SmoothDamp(_deltaRotation, Vector3.zero, ref _rotationVelocity, rotationDampingTime);
-
-                    for (int i = 0; i < Childrens.Count; i++)
-                    {
-                        Transform child = Childrens[i];
-                        var vec = (child.position - transform.position).normalized;
-                        Quaternion quaternion = Quaternion.Euler(_deltaRotation.x, _deltaRotation.y, _deltaRotation.z);
-                        var old = child.rotation;
-                        var newrotation = old* Quaternion.Inverse(old) * quaternion * old;
-                        Vector3 newVec = quaternion*vec;
-                       
-                        child.position = GetPointOnEllipsoid(newVec);
-                    }
- 
-            
+                    Quaternion delta = Quaternion.Euler(_deltaRotation.x, _deltaRotation.y, _deltaRotation.z);
+                    UpdateChildren(delta);
                     if (_deltaRotation == Vector3.zero)
                         _rotationDamping = false;
-            
                     SortChildren();
                 }
             }
         }
     }
 
+    private void UpdateChildren(Quaternion delta)
+    {
+        for (var i = 0; i < children.Count; i++)
+        {
+            var child = children[i];
+            var vec = (child.position - transform.position).normalized;
+            var newVec = delta*vec;
+            child.position = GetPointOnEllipsoid(newVec);
+        }
+    }
+    
+    
     public void BeginRotate(Vector2 touchPos)
     {
         if(!lockClick)
