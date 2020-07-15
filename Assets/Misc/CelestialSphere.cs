@@ -238,7 +238,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
 
     void Awake()
     {
-       
+        ResetEllipsoid();
         SortChildren();
     }
 
