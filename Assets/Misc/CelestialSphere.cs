@@ -33,7 +33,14 @@ public class CelestialSphereEditor : Editor
         
         if(GUILayout.Button("随机摆放节点"))
         {
+            celestial.ResetEllipsoid();
             RandomChildren(celestial);
+        }
+        
+        if(GUILayout.Button("均匀摆放节点"))
+        {
+            celestial.ResetEllipsoid();
+            celestial.PlaceChildrenAverage();
         }
         
         serializedObject.ApplyModifiedProperties(); 
@@ -57,8 +64,9 @@ public class CelestialSphereEditor : Editor
         }
     }
     
+    
     private void CollectChildren(CelestialSphere celestial)
-    { 
+    {
         if(celestial.children==null)
             celestial.children =new List<Transform>();
         celestial.children.Clear();
@@ -80,37 +88,39 @@ public class Ellipsoid
     public Vector3 A;
     public Vector3 B;
     public Vector3 C;
+    public Vector3 Rotation;
 
     private Matrix4x4 M;
     private Matrix4x4 T;
     private Matrix4x4 R;
     private Matrix4x4 S;
 
-  
-    public Ellipsoid(Vector3 Center,Vector3 A,Vector3 B,Vector3 C,Vector3 Rotation)
+    public Ellipsoid(Vector3 center,Vector3 a,Vector3 b,Vector3 c,Vector3 r)
     {
-        this.Center = Center;
-        var r = Matrix4x4.Rotate(Quaternion.Euler(Rotation));
-        this.A = r.MultiplyVector(A);
-        this.B = r.MultiplyVector(B);
-        this.C = r.MultiplyVector(C);
-        Init();
+        Set(center, a, b, c, r);
     }
 
-    public void Init()
+    public void Set(Vector3 center,Vector3 a,Vector3 b,Vector3 c,Vector3 r)
     {
+        this.Center = center;
+        this.Rotation = r;
+        var mxr = Matrix4x4.Rotate(Quaternion.Euler(this.Rotation));
+        this.A = mxr.MultiplyVector(a);
+        this.B = mxr.MultiplyVector(b);
+        this.C = mxr.MultiplyVector(c);
+        
         T = new Matrix4x4(
             new Vector4(1,0,0,Center.x),
             new Vector4(0,1,0,Center.y),
             new Vector4(0,0,1,Center.z),
             new Vector4(0,0,0,1));
-        var a = A.normalized;
-        var b = B.normalized;
-        var c = C.normalized;
+        var na = A.normalized;
+        var nb = B.normalized;
+        var nc = C.normalized;
         R = new Matrix4x4(
-            new Vector4(a.x,b.x,c.x,0),
-            new Vector4(a.y,b.y,c.y,0),
-            new Vector4(a.z,b.z,c.z,0),
+            new Vector4(na.x,nb.x,nc.x,0),
+            new Vector4(na.y,nb.y,nc.y,0),
+            new Vector4(na.z,nb.z,nc.z,0),
             new Vector4(0,0,0,1));
         S = new Matrix4x4(
             new Vector4(A.magnitude,0,0,0),
@@ -206,15 +216,29 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     {
         get
         {
-            if(_ellipsoid==null)
+            if (_ellipsoid == null)
+            {
                 _ellipsoid = new Ellipsoid(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+                PreParams();
+            }
             return _ellipsoid;
         }
     }
 
+    public void ResetEllipsoid()
+    {
+        if(_ellipsoid==null)
+            _ellipsoid = new Ellipsoid(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+        else
+        {
+            _ellipsoid.Set(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+        }
+        PreParams();
+    }
+
     void Awake()
     {
-        PreParams();
+       
         SortChildren();
     }
 
@@ -270,6 +294,32 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
                 children[i].transform.localScale = Vector3.Lerp(Vector3.one*max, Vector3.one *minScale,distance/_forwardDistance);
                 children[i].SetSiblingIndex(i);
             }
+        }
+    }
+    
+    
+    /// <summary>
+    /// 在表面均匀摆放子节点
+    /// </summary>
+    /// <param name="celestial"></param>
+    public void PlaceChildrenAverage()
+    {
+        var max = children.Count;
+        var p1 = Mathf.PI * (3 - Mathf.Sqrt(5));
+        var p2 = 2f / max;
+        for (int i = 0; i < max; i++)
+        {
+            var y = i * p2 - 1 + (p2 / 2);
+            var r = Mathf.Sqrt(1 - y * y);
+            var phi = i * p1;
+            var x = Mathf.Cos(phi) * r;
+            var z = Mathf.Sin(phi) * r; 
+            Vector3 d = Vector3.zero;
+            d.x = x;
+            d.y =y;
+            d.z = z;
+            var p = GetPointOnEllipsoid(d.normalized);
+            children[i].transform.position =  p;
         }
     }
     
@@ -362,8 +412,11 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     
     public void BeginRotate(Vector2 touchPos)
     {
-        if(!lockClick)
+        if (!lockClick)
+        {
             _clickTurn = false;
+            _clickObject = null;
+        }
         if (!_clickTurn)
         {
             _deltaQuaternion = Quaternion.identity;
