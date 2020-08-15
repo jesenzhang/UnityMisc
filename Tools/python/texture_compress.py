@@ -3,8 +3,8 @@
 @version: 
 @Author: jesen.zhang
 @Date: 2020-07-31 10:06:49
-@LastEditors: jesen.zhang
-@LastEditTime: 2020-07-31 13:02:56
+LastEditors: jesen.zhang
+LastEditTime: 2020-08-15 16:14:32
 '''
 #!/usr/bin/env python3 
 # -*- coding: UTF-8 -*- 
@@ -22,13 +22,25 @@ parser.add_argument('--path', type=str, default = None)
 parser.add_argument('--out', type=str, default = None)
 
 args = parser.parse_args()
-
 path = args.path.replace("\\","/")
-out = args.out.replace("\\","/")
 
-#判断目标是否目录 
-if (os.path.exists(out)==False):
-    os.makedirs(out)
+try:
+    path = unicode(path, 'GB2312') # 经过编码处理
+except:
+    pass # python3 已经移除 unicode，而且默认是 utf8 编码，所以不用转
+
+out=None
+if args.out!=None:
+    out = args.out.replace("\\","/")
+    try:
+        out = unicode(out, 'GB2312') # 经过编码处理
+    except:
+        pass # python3 已经移除 unicode，而且默认是 utf8 编码，所以不用转
+    #判断目标是否目录 
+    if (os.path.exists(out)==False):
+        os.makedirs(out)
+
+
 
 fileList = os.listdir(path)
 
@@ -51,8 +63,15 @@ for fileName in fileList:
         pat = "^[a-z0-9_]+\.(png)"
         # 进行匹配
         matchObj = re.match(pat, fileName)
+      
         if matchObj!=None:
-            print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85 "+ fileName + " --output "+ os.path.join(out,fileName).replace("\\","/")))
+            if out==None:
+                print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85  --ext=.png "+ fileName))
+                print(os.system(pngquant +" --force  --skip-if-larger --verbose --ordered --speed=1 --quality=50-90  --ext=.png "+ fileName))
+            else:
+                outpath =os.path.join(out,fileName).replace("\\","/")
+                print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85 "+ fileName + " --output "+ outpath))
+                print(os.system(pngquant +" --force  --skip-if-larger --verbose --ordered --speed=1 --quality=50-90 --ext=.png "+ outpath))
        
 sys.stdin.flush()
 
