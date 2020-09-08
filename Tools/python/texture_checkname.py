@@ -3,8 +3,8 @@
 @version: 
 @Author: jesen.zhang
 @Date: 2020-07-16 08:40:39
-@LastEditors: jesen.zhang
-@LastEditTime: 2020-07-31 11:49:11
+LastEditors: jesen.zhang
+LastEditTime: 2020-09-08 10:07:01
 '''
 #!/usr/bin/env python3 
 # -*- coding: UTF-8 -*- 
@@ -49,4 +49,4 @@ sys.stdin.flush()
 
 os.chdir(currentpath)
 
-print("Done")
+print("文件名称检查 Done")

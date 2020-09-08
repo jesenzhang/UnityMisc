@@ -5,6 +5,7 @@ REM set path=%~d0%~p0
 set PWD=%~dp0
 echo %PWD%
 
+python "%PWD%fileSizeLog.py " --path  %1
 python "%PWD%texture_checkname.py " --path  %1
 pause
 
