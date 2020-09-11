@@ -4,7 +4,7 @@
 @Author: jesen.zhang
 @Date: 2020-07-31 10:06:49
 LastEditors: jesen.zhang
-LastEditTime: 2020-08-15 16:14:32
+LastEditTime: 2020-09-11 16:27:03
 '''
 #!/usr/bin/env python3 
 # -*- coding: UTF-8 -*- 
@@ -37,33 +37,47 @@ if args.out!=None:
     except:
         pass # python3 已经移除 unicode，而且默认是 utf8 编码，所以不用转
     #判断目标是否目录 
-    if (os.path.exists(out)==False):
-        os.makedirs(out)
+    if not os.path.isfile(out):
+        if (os.path.exists(out)==False):
+            os.makedirs(out)
 
 
-
-fileList = os.listdir(path)
+abs_file=__file__
+print("abs path is %s" %(__file__))
+abs_dir=abs_file[:abs_file.rfind("\\")]   # windows下用\\分隔路径，linux下用/分隔路径
+print("abs path is %s" %(os.path.abspath(sys.argv[0])))
 
 # 得到进程当前工作目录
-currentpath = os.getcwd().replace("\\","/")
-
-# 将当前工作目录修改为待修改文件夹的位置
-os.chdir(path)
-
+currentpath = abs_dir;# os.getcwd().replace("\\","/")
 systemType = platform.system()
-
 pngquant =  systemType=="Windows" and "../pngquant/pngquant.exe" or systemType=="Mac" and "../pngquant/pngquant" or "../pngquant/pngquant.exe"
 pngquant = currentpath+"/"+pngquant
 print("pngquant "+pngquant)
+
+if os.path.isfile(path):
+    # parent_path = os.path.dirname(path)
+    (parent_path, file) = os.path.split(path)
+    # pattern = re.compile(r'([^<>/\\\|:""\*\?]+)\.\w+$')
+    # filename = pattern.findall(path)
+    fileList = [file]
+     # 将当前工作目录修改为待修改文件夹的位置
+    os.chdir(parent_path)
+    print("parent_path "+parent_path)
+else:
+    fileList = os.listdir(path)
+    # 将当前工作目录修改为待修改文件夹的位置
+    os.chdir(path)
+    print("parent_path "+path)
+
+
 # 遍历文件夹中所有文件
 for fileName in fileList:
      if os.path.isfile(fileName):
-        print(fileName)
         # 匹配文件名正则表达式
         pat = "^[a-z0-9_]+\.(png)"
         # 进行匹配
         matchObj = re.match(pat, fileName)
-      
+        print(fileName) 
         if matchObj!=None:
             if out==None:
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85  --ext=.png "+ fileName))
