@@ -35,6 +35,7 @@ for fileName in fileList:
         matchObj = re.match(pat, fileName)
         if matchObj==None:
             oldname = fileName.lower()
+            oldname = re.sub(' ','',oldname)
             #去除后缀
             imagename= os.path.splitext(oldname)[0]
             suffix= os.path.splitext(oldname)[1]
