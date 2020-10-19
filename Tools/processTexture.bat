@@ -8,5 +8,3 @@ echo %PWD%
 python "%PWD%textureprocess.py "
 
 pause
-
- 

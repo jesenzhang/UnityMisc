@@ -69,8 +69,15 @@ jpegtran  =  systemType=="Windows" and "../mozjpeg/windows3.3.1/jpegtran-static.
 jpegtran = currentpath+"/"+jpegtran
 print("jpegtran "+jpegtran)
 
-# 定义函数
-def compressTexture( filePath ,fileName ,outpath ):
+# 定义函数 创建目录
+def makeDir(outpath):
+    (dirPath, file) = os.path.split(outpath)
+    if not os.path.isfile(dirPath):
+        if (os.path.exists(dirPath)==False):
+            os.makedirs(dirPath)
+
+# 定义函数 压缩图片
+def compressTexture( filePath ,fileName , outpath ):
     if os.path.isfile(filePath):
         # 匹配文件名正则表达式
         # pat = "^[a-z0-9_]+\.(png||jpg)"
@@ -85,15 +92,17 @@ def compressTexture( filePath ,fileName ,outpath ):
             imagename= os.path.splitext(oldname)[0]
             suffix= os.path.splitext(oldname)[1]
             print(suffix)
+
             if suffix==".jpg":
                 # print(os.system(guetzli +" --quality 84 --verbose "+ filePath + " " + outpath))
                 #print(os.system(jpegtran + " -outfile " + outpath +" "+ filePath ))
                 if outpath==filePath:
                      outpath=outpath.replace(fileName,imagename+"_c"+suffix)
+                makeDir(outpath)
                 print(os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + outpath +" "+ filePath))
                 #+" -quality 85 -verbose "
-
             elif suffix==".png":
+                makeDir(outpath)
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85 "+ filePath + " --output "+ outpath))
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --ordered --speed=1 --quality=50-90 --ext=.png "+ outpath))
     print(fileName + " Done")

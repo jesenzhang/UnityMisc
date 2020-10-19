@@ -5,7 +5,7 @@ REM set path=%~d0%~p0
 set PWD=%~dp0
 echo %PWD%
 
-python "%PWD%texture_compress.py " --path  %1
+python "%PWD%texture_compress.py " --path  %1 --out %1"/out"
 
 pause
 
