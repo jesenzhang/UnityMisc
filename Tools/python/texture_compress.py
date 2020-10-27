@@ -38,6 +38,7 @@ if args.out!=None:
     except:
         pass # python3 已经移除 unicode，而且默认是 utf8 编码，所以不用转
     #判断目标是否目录 
+    print("out ："+ out)
     if not os.path.isfile(out):
         if (os.path.exists(out)==False):
             os.makedirs(out)
@@ -103,6 +104,8 @@ def compressTexture( filePath ,fileName , outpath ):
                 #+" -quality 85 -verbose "
             elif suffix==".png":
                 makeDir(outpath)
+                print("filePath " +filePath)
+                print("outpath " +outpath)
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85 "+ filePath + " --output "+ outpath))
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --ordered --speed=1 --quality=50-90 --ext=.png "+ outpath))
     print(fileName + " Done")

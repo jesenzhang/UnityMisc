@@ -20,12 +20,21 @@ parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
 args = parser.parse_args()
 
-fileList = os.listdir(args.path)
+path=args.path.replace("\\","/")
+
+if os.path.isfile(path):
+    (parent_path, file) = os.path.split(path)
+    fileList = [file]
+else:
+    fileList = os.listdir(path)
+    parent_path = path 
 
 # 得到进程当前工作目录
 currentpath = os.getcwd()
 # 将当前工作目录修改为待修改文件夹的位置
-os.chdir(args.path)
+
+os.chdir(parent_path)
+
 # 遍历文件夹中所有文件
 for fileName in fileList:
     if os.path.isfile(fileName):
