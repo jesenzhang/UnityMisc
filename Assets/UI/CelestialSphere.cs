@@ -43,6 +43,11 @@ public class CelestialSphereEditor : Editor
             celestial.PlaceChildrenAverage();
         }
         
+        if(GUILayout.Button("重建椭球体"))
+        {
+            celestial.ResetEllipsoid();
+        }
+        
         serializedObject.ApplyModifiedProperties(); 
     }
     
@@ -78,86 +83,18 @@ public class CelestialSphereEditor : Editor
         }
     }
 }
-
-
 #endif
-
-public class Ellipsoid
-{
-    public Vector3 Center;
-    public Vector3 A;
-    public Vector3 B;
-    public Vector3 C;
-    public Vector3 Rotation;
-
-    private Matrix4x4 M;
-    private Matrix4x4 T;
-    private Matrix4x4 R;
-    private Matrix4x4 S;
-
-    public Ellipsoid(Vector3 center,Vector3 a,Vector3 b,Vector3 c,Vector3 r)
-    {
-        Set(center, a, b, c, r);
-    }
-
-    public void Set(Vector3 center,Vector3 a,Vector3 b,Vector3 c,Vector3 r)
-    {
-        this.Center = center;
-        this.Rotation = r;
-        var mxr = Matrix4x4.Rotate(Quaternion.Euler(this.Rotation));
-        this.A = mxr.MultiplyVector(a);
-        this.B = mxr.MultiplyVector(b);
-        this.C = mxr.MultiplyVector(c);
-        
-        T = new Matrix4x4(
-            new Vector4(1,0,0,Center.x),
-            new Vector4(0,1,0,Center.y),
-            new Vector4(0,0,1,Center.z),
-            new Vector4(0,0,0,1));
-        var na = A.normalized;
-        var nb = B.normalized;
-        var nc = C.normalized;
-        R = new Matrix4x4(
-            new Vector4(na.x,nb.x,nc.x,0),
-            new Vector4(na.y,nb.y,nc.y,0),
-            new Vector4(na.z,nb.z,nc.z,0),
-            new Vector4(0,0,0,1));
-        S = new Matrix4x4(
-            new Vector4(A.magnitude,0,0,0),
-            new Vector4(0,B.magnitude,0,0),
-            new Vector4(0,0,C.magnitude,0),
-            new Vector4(0,0,0,1));
-        M = T * R * S;
-    }
-
-    public Vector3 CaculateLineIntersection(Vector3 lineStart,Vector3 lineDir)
-    {
-        var L = M.inverse.MultiplyPoint(lineStart);
-        var V = M.inverse.MultiplyVector(lineDir);
-        var W = L - Vector3.zero;
-        var a =Vector3.Dot(V,V);
-        var b =2* Vector3.Dot(V, W);
-        var c = Vector3.Dot(W, W) - 1;
-        var s = b * b - 4 * a * c;
-        if (s > 0)
-        {
-            var p0 = lineStart + ((-b + Mathf.Sqrt(s)) / a) * 0.5f*lineDir;
-            var p1 = lineStart + ((-b - Mathf.Sqrt(s)) / a) * 0.5f*lineDir;
-            return p0;
-        }
-        if (Math.Abs(s) < 0.001f)
-        {
-            var p = lineStart + (-b / a) * 0.5f*lineDir;
-            return p;
-        }
-        return Vector3.zero;
-    }
-}
-
 
 [ExecuteInEditMode]
 public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
 {
+    //子节点朝向
+    public enum FaceMode
+    {
+        None =0,
+        Forward,
+        Normal,
+    }
     public List<Transform> children;
     
     [Tooltip("椭圆x轴半长轴")]
@@ -198,6 +135,11 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     [Tooltip("点击跳转缩放周期")]
     public float clickScaleDuration = 0.2f;
 
+    [Tooltip("是否按照距离更新子节点排序SiblingIndex")]
+    public bool updateSiblingIndex = true;
+    
+    [Tooltip("子节点朝向")]
+    public FaceMode fceMode = FaceMode.None;
    
     
     private Vector3 _deltaRotation;
@@ -298,7 +240,17 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
                 var distance = Mathf.Abs(Vector3.Dot(forward,(child.position - _nearPoint)));
                 var max = ReferenceEquals(child,_clickObject) ? clickItemSize : maxScale;
                 children[i].transform.localScale = Vector3.Lerp(Vector3.one*max, Vector3.one *minScale,distance/_forwardDistance);
-                children[i].SetSiblingIndex(i);
+
+                if (fceMode == FaceMode.Normal)
+                {
+                    children[i].transform.forward = (child.position - transform.position).normalized;
+                }else if (fceMode == FaceMode.Forward)
+                {
+                    children[i].transform.forward = forward;
+                }
+                
+                if(updateSiblingIndex)
+                    children[i].SetSiblingIndex(i);
             }
         }
     }
