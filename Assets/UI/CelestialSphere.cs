@@ -161,19 +161,19 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     public List<Transform> children;
     
     [Tooltip("椭圆x轴半长轴")]
-    public float axisA;
+    public float ellipsoidAxisA = 400;
     [Tooltip("椭圆y轴半长轴")]
-    public float axisB;
+    public float ellipsoidAxisB = 400;
     [Tooltip("椭圆z轴半长轴")]
-    public float axisC;
+    public float ellipsoidAxisC = 400;
     [Tooltip("椭圆的旋转")]
-    public Vector3 rotation;
+    public Vector3 ellipsoidRotation = Vector3.zero;
     [Tooltip("最近item的缩放大小")]
     public float maxScale = 1f;
     [Tooltip("最远item的缩放大小")]
     public float minScale = 0.5f;
     [Tooltip("正方向")]
-    public Vector3 Forward = Vector3.back;
+    public Vector3 forward = Vector3.back;
     [Tooltip("是否控制水平方向")]
     public bool horizontal = true;
     [Tooltip("是否控制垂直方向")]
@@ -181,9 +181,10 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     //旋转速度
     [Tooltip("旋转速度")]
     public float rotationSpeed = 0.001f;
-    //旋转速度
-    [Tooltip("点击跳转旋转速度")]
-    public float turnRotationSpeed = 0.01f;
+    [Tooltip("自动旋转")]
+    public bool autoRotation = false;
+    [Tooltip("椭圆的自动旋转速度")]
+    public Vector3 autoRotationSpeed;
     //阻尼时间
     [Tooltip("阻尼时间")]
     public float rotationDampingTime = 0.2f;
@@ -191,8 +192,13 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     public float clickItemSize = 1.8f;
     [Tooltip("选中时锁定拖拽")]
     public bool lockClick = false;
-    [Tooltip("选中旋转时间")]
-    public float clickTurnDuration = 0.2f;
+ 
+    [Tooltip("点击跳转旋转速度")]
+    public float turnRotationSpeed = 0.01f;
+    [Tooltip("点击跳转缩放周期")]
+    public float clickScaleDuration = 0.2f;
+
+   
     
     private Vector3 _deltaRotation;
     private Vector3 _followAngles;
@@ -218,7 +224,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
         {
             if (_ellipsoid == null)
             {
-                _ellipsoid = new Ellipsoid(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+                _ellipsoid = new Ellipsoid(Vector3.zero, ellipsoidAxisA * Vector3.right, ellipsoidAxisB * Vector3.up,ellipsoidAxisC * Vector3.forward,ellipsoidRotation);
                 PreParams();
             }
             return _ellipsoid;
@@ -228,10 +234,10 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     public void ResetEllipsoid()
     {
         if(_ellipsoid==null)
-            _ellipsoid = new Ellipsoid(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+            _ellipsoid = new Ellipsoid(Vector3.zero, ellipsoidAxisA * Vector3.right, ellipsoidAxisB * Vector3.up,ellipsoidAxisC * Vector3.forward,ellipsoidRotation);
         else
         {
-            _ellipsoid.Set(Vector3.zero, axisA * Vector3.right, axisB * Vector3.up,axisC * Vector3.forward,rotation);
+            _ellipsoid.Set(Vector3.zero, ellipsoidAxisA * Vector3.right, ellipsoidAxisB * Vector3.up,ellipsoidAxisC * Vector3.forward,ellipsoidRotation);
         }
         PreParams();
     }
@@ -247,8 +253,8 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     /// </summary>
     public void PreParams()
     {
-        _nearPoint = GetPointOnEllipsoid(Forward);
-        _farPoint = GetPointOnEllipsoid(-1*Forward);
+        _nearPoint = GetPointOnEllipsoid(forward);
+        _farPoint = GetPointOnEllipsoid(-1*forward);
         _forwardDistance = (_nearPoint - _farPoint).magnitude;
     }
 
@@ -269,7 +275,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
     /// <returns></returns>
     private float ChildDepth(Transform child)
     {
-        return Vector3.Dot(Forward,(child.position - transform.position));
+        return Vector3.Dot(forward,(child.position - transform.position));
     }
 
     /// <summary>
@@ -289,7 +295,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
             for (var i = 0; i < children.Count; i++)
             {
                 var child = children[i];
-                var distance = Mathf.Abs(Vector3.Dot(Forward,(child.position - _nearPoint)));
+                var distance = Mathf.Abs(Vector3.Dot(forward,(child.position - _nearPoint)));
                 var max = ReferenceEquals(child,_clickObject) ? clickItemSize : maxScale;
                 children[i].transform.localScale = Vector3.Lerp(Vector3.one*max, Vector3.one *minScale,distance/_forwardDistance);
                 children[i].SetSiblingIndex(i);
@@ -344,7 +350,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
         else
         {
             var vec1 = (child.transform.position - transform.position).normalized;
-            _deltaQuaternion = Quaternion.FromToRotation(vec1, Forward);
+            _deltaQuaternion = Quaternion.FromToRotation(vec1, forward);
             _rotationDamping = false;
             _clickTurn = true;
             _clickObject = child;
@@ -373,7 +379,7 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
             if (_turnback && _clickObject)
             {
                 _localTime += Time.deltaTime;
-                var f = Mathf.Clamp(_localTime/clickTurnDuration,0, 1);
+                var f = Mathf.Clamp(_localTime/clickScaleDuration,0, 1);
                 _clickObject.localScale = Vector3.Lerp(Vector3.one*clickItemSize, Vector3.one *maxScale, f);
                 if (f >= 1)
                 {
@@ -394,10 +400,24 @@ public class CelestialSphere : MonoBehaviour,IBeginDragHandler,IDragHandler
                         _rotationDamping = false;
                     SortChildren();
                 }
+                else
+                {
+                    //自转
+                    if (autoRotation)
+                    {
+                        Quaternion delta = Quaternion.Euler(autoRotationSpeed.x, autoRotationSpeed.y, autoRotationSpeed.z);
+                        UpdateChildren(delta);
+                        SortChildren();
+                    }
+                }
             }
         }
     }
 
+    /// <summary>
+    /// 更新节点的位置
+    /// </summary>
+    /// <param name="delta">偏移增量</param>
     private void UpdateChildren(Quaternion delta)
     {
         for (var i = 0; i < children.Count; i++)
