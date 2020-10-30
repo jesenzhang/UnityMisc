@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI_Common
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 2
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 53359ccdb48154042985d466e23e3e03, type: 3}
+    totalSpriteSurfaceArea: 644632
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 41f79560376ebe449b8cb93326949eba, type: 3}
+  - {fileID: 21300000, guid: 16e7c080cec75864cab2fb33eafcd3ac, type: 3}
+  - {fileID: 21300000, guid: f8c25cd07444afe4a8c0070bb2897aea, type: 3}
+  - {fileID: 21300000, guid: 61c4710144895944a87d8150d5984441, type: 3}
+  - {fileID: 21300000, guid: 2d065301e7321574881e0c64ed0230fb, type: 3}
+  - {fileID: 21300000, guid: 46e56021d1aceaa4cb856fc11af29444, type: 3}
+  - {fileID: 21300000, guid: bef02e2183497d846ae937262984f6de, type: 3}
+  - {fileID: 21300000, guid: 01bbf86151e0aea4099aae37120db4c3, type: 3}
+  - {fileID: 21300000, guid: 869d6e1296c1fbf4dbffe485222948f9, type: 3}
+  - {fileID: 21300000, guid: 46db2b32d692638478015811575e9e38, type: 3}
+  - {fileID: 21300000, guid: 5e6bef82978fbac469abd287a6d85885, type: 3}
+  - {fileID: 21300000, guid: e917f13368bdf20438d7fb6041f6e351, type: 3}
+  - {fileID: 21300000, guid: eaacff939af64bc4083e5b30d970eada, type: 3}
+  - {fileID: 21300000, guid: 3530ae05f637de240ab51fa687d69deb, type: 3}
+  - {fileID: 21300000, guid: 2d6e1e855dab1914a93ac4081f02fcd4, type: 3}
+  - {fileID: 21300000, guid: 189836f5c84a08d40ab7b5d0d4a9a108, type: 3}
+  - {fileID: 21300000, guid: aaccc71693182d64e8c871f83f134c0b, type: 3}
+  - {fileID: 21300000, guid: 7c0806765b162654e9d6ade26d5ddfa7, type: 3}
+  - {fileID: 21300000, guid: d2c81e07218c1264196dc009acea8d13, type: 3}
+  - {fileID: 21300000, guid: 12ff2a879bfe37842aa80d395123da07, type: 3}
+  - {fileID: 21300000, guid: 3e54fdd7813ee9346acb7cc6b229ca29, type: 3}
+  - {fileID: 21300000, guid: 9f1d2d08642ecb642b278621c7526008, type: 3}
+  - {fileID: 21300000, guid: cc4ac758c739dac42aa5b5c3bf71d6a0, type: 3}
+  - {fileID: 21300000, guid: 6ac012a8338998740b8f9711a34fee90, type: 3}
+  - {fileID: 21300000, guid: b29702b80826b02419a172a9c8bd9a31, type: 3}
+  - {fileID: 21300000, guid: 7394bd294fd52ce4f86ea5f01e217445, type: 3}
+  - {fileID: 21300000, guid: ed2bc169275d6e946a6ae0a2446ff5b5, type: 3}
+  - {fileID: 21300000, guid: d16eb2a93a4e91a418db45938e68b3fa, type: 3}
+  - {fileID: 21300000, guid: 81b6fea980a322b4387dac27c4e84f97, type: 3}
+  - {fileID: 21300000, guid: 57e703b9b93fa7445a871d449cca4123, type: 3}
+  - {fileID: 21300000, guid: 0c9f3bf9ed5aa5a41b42f6922a6aec9d, type: 3}
+  - {fileID: 21300000, guid: 580ba00a228eac148a1370d83a7e9fcf, type: 3}
+  - {fileID: 21300000, guid: 258eda4a82066454082d4a91bf82c334, type: 3}
+  - {fileID: 21300000, guid: 07775d4acce5a4648ae39662c50496a8, type: 3}
+  - {fileID: 21300000, guid: 3f4c33aaa9ff97a469180db02ec01841, type: 3}
+  - {fileID: 21300000, guid: a4b250baa7e4bc740a1e5f8905645e19, type: 3}
+  - {fileID: 21300000, guid: 75a242da614a0cd49a239e05cb66cbfb, type: 3}
+  - {fileID: 21300000, guid: 3bc9aaeaf42de4e46966a0d808576a0d, type: 3}
+  - {fileID: 21300000, guid: cf3eb0fa5507c5743a2039f19ca9d5b0, type: 3}
+  - {fileID: 21300000, guid: 250b8f0bf2732a546ae0372ea2dfe019, type: 3}
+  - {fileID: 21300000, guid: faee662b93451474eb1c56643122126e, type: 3}
+  - {fileID: 21300000, guid: 851a792b036d95a40a8f481390130906, type: 3}
+  - {fileID: 21300000, guid: 45287a7cfe95e4042ab5385b1fdabb17, type: 3}
+  - {fileID: 21300000, guid: 77811bec2a5d39144b8f27553a4efbdc, type: 3}
+  - {fileID: 21300000, guid: cd88f33de8bf75049aae0a961324ba86, type: 3}
+  - {fileID: 21300000, guid: 9e9cc48d73f725944920bc29ab899844, type: 3}
+  - {fileID: 21300000, guid: 372a668dc91ef324fbe7aee9508380dd, type: 3}
+  - {fileID: 21300000, guid: e939079dfa549914983c45eb9d9932d9, type: 3}
+  - {fileID: 21300000, guid: f6e0289dc8471e64ea022bb1c5531153, type: 3}
+  - {fileID: 21300000, guid: 2a2fbc9d9cf25c243a940bdccdb77c41, type: 3}
+  - {fileID: 21300000, guid: 25e177ad21e8476458b93a7e86c5bab4, type: 3}
+  - {fileID: 21300000, guid: d4596fbd3187fb0449cda6abee263231, type: 3}
+  - {fileID: 21300000, guid: c715cecd670d34842a53b6367012245b, type: 3}
+  - {fileID: 21300000, guid: ec59f77e7d9ddfe47883cba7c1de4a2b, type: 3}
+  - {fileID: 21300000, guid: a01eaace958f68040a4abe412ccab2e7, type: 3}
+  - {fileID: 21300000, guid: 067ac3dec56bae44794133a870e19fbc, type: 3}
+  - {fileID: 21300000, guid: 95d23a7fe584d7b43a00fb54e3f4b9c6, type: 3}
+  - {fileID: 21300000, guid: b8ea1cbf15c9e0748b642429d584ceec, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - icon_lockoff_0
+  - block_c70
+  - block_c50
+  - icon_lockon_0
+  - blockring_c70
+  - ring_256
+  - close
+  - icon_change
+  - block_4
+  - ring_64_w10
+  - icon_lockon_1
+  - hotspot
+  - loadingfront
+  - circular_256
+  - triangle
+  - icon_checklist_on
+  - white
+  - arrow
+  - circular_128
+  - ring_64
+  - block_c20
+  - blockring_c60
+  - circular_64
+  - block_c10
+  - loadingback
+  - blockring_c10
+  - icon_zoom
+  - block_c60
+  - blockring_c30
+  - icon_watch
+  - icon_setting
+  - ring_128_w10
+  - icon_pen
+  - block_c30
+  - icon_signal
+  - shadowltr
+  - icon_paperplane
+  - ring_256_w10
+  - triangle1
+  - pause
+  - line_gradient
+  - block_c40
+  - close_1
+  - ring_128
+  - line_repeat
+  - empty
+  - icon_refresh
+  - tip
+  - triangle0
+  - icon_pad
+  - blockring_c50
+  - blockring_c20
+  - icon_bell
+  - play
+  - blockring_c70_w10
+  - icon_lockoff_1
+  - icon_checklist_off
+  - blockring_c40
+  m_Tag: UI_Common
+  m_IsVariant: 0
