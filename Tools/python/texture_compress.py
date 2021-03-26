@@ -47,6 +47,8 @@ if args.out!=None:
 abs_file=__file__
 print("abs path is %s" %(__file__))
 abs_dir=abs_file[:abs_file.rfind("\\")]   # windows下用\\分隔路径，linux下用/分隔路径
+abs_dir = os.path.abspath(sys.argv[0])
+abs_dir=abs_dir[:abs_dir.rfind("\\")] 
 print("abs path is %s" %(os.path.abspath(sys.argv[0])))
 
 # 得到进程当前工作目录
@@ -85,8 +87,8 @@ def compressTexture( filePath ,fileName , outpath ):
         pat = "(.*)\.(png||jpg)"
         # 进行匹配
         matchObj = re.match(pat, fileName)
-        print(fileName)
         if matchObj!=None:
+            print(fileName)
             oldname = fileName.lower()
             oldname = re.sub(' ','',oldname)
             #去除后缀
@@ -108,7 +110,7 @@ def compressTexture( filePath ,fileName , outpath ):
                 print("outpath " +outpath)
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --speed=1 --quality=45-85 "+ filePath + " --output "+ outpath))
                 print(os.system(pngquant +" --force  --skip-if-larger --verbose --ordered --speed=1 --quality=50-90 --ext=.png "+ outpath))
-    print(fileName + " Done")
+            print(fileName + " Done")
  
 
 if os.path.isfile(path):
