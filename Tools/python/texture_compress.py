@@ -99,10 +99,14 @@ def compressTexture( filePath ,fileName , outpath ):
             if suffix==".jpg":
                 # print(os.system(guetzli +" --quality 84 --verbose "+ filePath + " " + outpath))
                 #print(os.system(jpegtran + " -outfile " + outpath +" "+ filePath ))
+                tempPath = outpath
                 if outpath==filePath:
-                     outpath=outpath.replace(fileName,imagename+"_c"+suffix)
+                     tempPath=outpath.replace(fileName,imagename+"_c"+suffix)
+                     outpath=outpath.replace(fileName,imagename+suffix)
                 makeDir(outpath)
-                print(os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + outpath +" "+ filePath))
+                print(os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3  -progressive -outfile " + tempPath +" "+ filePath))
+                os.remove(outpath)
+                os.rename(tempPath , outpath)
                 #+" -quality 85 -verbose "
             elif suffix==".png":
                 makeDir(outpath)
@@ -124,11 +128,15 @@ if os.path.isfile(path):
     print("parent_path "+parent_path)
 
     filePath = path.replace("\\","/")
-    if out==None:
+    outFile = os.path.isfile(out)
+    if out==None or (outFile==False):
         out=parent_path
-    outpath = filePath.replace(parent_path,out).replace("\\","/")
-
-    print("path "+path)
+        outpath = filePath.replace(parent_path,out).replace("\\","/")
+    elif os.path.isfile(out):
+        outpath = out
+    
+    
+    print("filePath "+filePath)
     print("file "+file)
     print("outpath "+outpath)
 
