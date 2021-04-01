@@ -16,7 +16,7 @@ import sys
 import os.path
 import argparse
 import platform
-
+from PIL import Image  
    
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
@@ -87,8 +87,12 @@ def compressTexture( filePath ,fileName , outpath ):
         pat = "(.*)\.(png||jpg)"
         # 进行匹配
         matchObj = re.match(pat, fileName)
+
         if matchObj!=None:
-            print(fileName)
+            img = Image.open(filePath)  
+            #format JPEG PNG
+            imgFormat = img.format
+            print("fileName "+ fileName + " imgFormat "+ imgFormat)
             oldname = fileName.lower()
             oldname = re.sub(' ','',oldname)
             #去除后缀
@@ -96,7 +100,7 @@ def compressTexture( filePath ,fileName , outpath ):
             suffix= os.path.splitext(oldname)[1]
             print(suffix)
 
-            if suffix==".jpg":
+            if imgFormat=="JPEG":
                 # print(os.system(guetzli +" --quality 84 --verbose "+ filePath + " " + outpath))
                 #print(os.system(jpegtran + " -outfile " + outpath +" "+ filePath ))
                 tempPath = outpath
@@ -104,11 +108,13 @@ def compressTexture( filePath ,fileName , outpath ):
                      tempPath=outpath.replace(fileName,imagename+"_c"+suffix)
                      outpath=outpath.replace(fileName,imagename+suffix)
                 makeDir(outpath)
-                print(os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3  -progressive -outfile " + tempPath +" "+ filePath))
-                os.remove(outpath)
-                os.rename(tempPath , outpath)
+                if os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + tempPath +" "+ filePath) ==0:
+                    print("rename")
+                    os.remove(outpath)
+                    os.rename(tempPath , outpath)
+                
                 #+" -quality 85 -verbose "
-            elif suffix==".png":
+            elif imgFormat=="PNG":
                 makeDir(outpath)
                 print("filePath " +filePath)
                 print("outpath " +outpath)
