@@ -17,7 +17,9 @@ import os.path
 import argparse
 import platform
 from PIL import Image  
-   
+import subprocess
+import time  # 引入time模块
+
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
 parser.add_argument('--out', type=str, default = None)
@@ -99,6 +101,7 @@ def compressTexture( filePath ,fileName , outpath ):
             imagename= os.path.splitext(oldname)[0]
             suffix= os.path.splitext(oldname)[1]
             print(suffix)
+            img.close()
 
             if imgFormat=="JPEG":
                 # print(os.system(guetzli +" --quality 84 --verbose "+ filePath + " " + outpath))
@@ -108,12 +111,19 @@ def compressTexture( filePath ,fileName , outpath ):
                      tempPath=outpath.replace(fileName,imagename+"_c"+suffix)
                      outpath=outpath.replace(fileName,imagename+suffix)
                 makeDir(outpath)
-                if os.system(cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + tempPath +" "+ filePath) ==0:
+                cmd = cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + tempPath +" "+ filePath
+                
+                ret = subprocess.run(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8",timeout=1)
+                if ret.returncode == 0:
+                    print("success:",ret)
+                else:
+                    print("error:",ret)
+                if ret.returncode ==0:
                     print("rename")
+                   # print(os.access(outpath, os.X_OK)) # 文件是否可执行
                     os.remove(outpath)
                     os.rename(tempPath , outpath)
-                
-                #+" -quality 85 -verbose "
+
             elif imgFormat=="PNG":
                 makeDir(outpath)
                 print("filePath " +filePath)
