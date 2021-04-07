@@ -86,7 +86,7 @@ def compressTexture( filePath ,fileName , outpath ):
     if os.path.isfile(filePath):
         # 匹配文件名正则表达式
         # pat = "^[a-z0-9_]+\.(png||jpg)"
-        pat = "(.*)\.(png||jpg)"
+        pat = "(.*)\.(png||jpg)$"
         # 进行匹配
         matchObj = re.match(pat, fileName)
 
@@ -107,10 +107,15 @@ def compressTexture( filePath ,fileName , outpath ):
                 # print(os.system(guetzli +" --quality 84 --verbose "+ filePath + " " + outpath))
                 #print(os.system(jpegtran + " -outfile " + outpath +" "+ filePath ))
                 tempPath = outpath
+                needRename = False
                 if outpath==filePath:
-                     tempPath=outpath.replace(fileName,imagename+"_c"+suffix)
-                     outpath=outpath.replace(fileName,imagename+suffix)
+                    needRename = True
+                    outpath=filePath.replace(fileName,imagename+suffix)
+                    tempPath=filePath.replace(fileName,imagename+"_c"+suffix)
                 makeDir(outpath)
+
+                print("tempPath " + tempPath + " outpath "+outpath)
+
                 cmd = cjpeg + " -quality 75 -smooth 0 -baseline -sample 2x2 -quant-table 3 -outfile " + tempPath +" "+ filePath
                 
                 ret = subprocess.run(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,encoding="utf-8",timeout=1)
@@ -118,7 +123,7 @@ def compressTexture( filePath ,fileName , outpath ):
                     print("success:",ret)
                 else:
                     print("error:",ret)
-                if ret.returncode ==0:
+                if ret.returncode ==0 and needRename:
                     print("rename")
                    # print(os.access(outpath, os.X_OK)) # 文件是否可执行
                     os.remove(outpath)
