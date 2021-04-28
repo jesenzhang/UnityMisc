@@ -1,7 +1,7 @@
 """
- * Python script to demonstrate Gaussian blur.
+ * Python script to Resize Image.
  *
- * usage: python ImageBlur.py <filename> <sigma>
+ * usage: python ImageResize.py <filename> <size>
 """
 
 #!/usr/bin/env python3 
@@ -15,36 +15,45 @@ import argparse
 
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
-parser.add_argument('--sigma', type=int, default = None)
 parser.add_argument('--outPath', type=str, default = None)
+parser.add_argument('--mode', type=int, default = 0)
+parser.add_argument('--width', type=int, default = None)
+parser.add_argument('--height', type=int, default = None)
 args = parser.parse_args()
 
 path=args.path.replace("\\","/")
-sigma=args.sigma
+width=args.width
+height=args.height
 outPath=args.outPath
+mode=args.mode
 
-# filename = sys.argv[1]
-# sigma = float(sys.argv[2])
-# outPath = sys.argv[3]
-
-def BlurTexture(filePath ,sigma, outpath):
+def ResizeTexture(filePath,mode,w,h,outpath):
     OriImage = Image.open(filePath)
     #OriImage.show()
     basename = os.path.basename(filePath)
     imagename= os.path.splitext(basename)[0]
     suffix= os.path.splitext(basename)[1]
 
-    #ImageFilter.BoxBlur(5)
-    #ImageFilter.GaussianBlur(radius=2) 
-    #ImageFilter.BLUR
-    blurImage = OriImage.filter(ImageFilter.GaussianBlur(sigma))
+    if mode==0:
+        newsize = (w, h) 
+    elif mode==1:
+        newsize = (int(OriImage.size[0]*(w*0.01)),int(OriImage.size[1]*(h*0.01)))
+
+    # img=img.resize((size, size), Image.ANTIALIAS)重置图片大小。
+    # 其中，第二个参数：
+    # Image.NEAREST ：低质量
+    # Image.BILINEAR：双线性
+    # Image.BICUBIC ：三次样条插值
+    # Image.ANTIALIAS：高质量
+
+    blurImage = OriImage.resize(newsize,Image.BILINEAR)
     #blurImage.show()
 
     print(basename+" "+imagename+" "+suffix)
 
     #Save blur image
     if outpath==filePath:
-        outpath = outpath.replace(imagename,imagename+"_blur")
+        outpath = outpath.replace(imagename,imagename+"_resize")
     blurImage.save(outpath)
 
     OriImage.close()
@@ -55,7 +64,7 @@ if outPath==None:
     outPath = path
 
 if os.path.isfile(path):
-    BlurTexture(path,sigma,outPath)
+    ResizeTexture(path,mode,width,height,outPath)
 else:
     for root, dirs, files in os.walk(path):
         print('root_dir:', root)  # 当前目录路径
@@ -67,6 +76,6 @@ else:
             fout = filePath.replace(path,outPath).replace("\\","/")
             print("filePath "+filePath)
             print("outpath "+fout)
-            BlurTexture(filePath,sigma,fout)
+            ResizeTexture(filePath,mode,width,height,fout)
 
-print("Blur Done")
+print("Resize Done")
