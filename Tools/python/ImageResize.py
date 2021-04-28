@@ -12,6 +12,7 @@ import sys
 import os
 import os.path
 import argparse
+import re
 
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
@@ -51,9 +52,9 @@ def ResizeTexture(filePath,mode,w,h,outpath):
 
     print(basename+" "+imagename+" "+suffix)
 
-    #Save blur image
-    if outpath==filePath:
-        outpath = outpath.replace(imagename,imagename+"_resize")
+    #Save image
+    #if outpath==filePath:
+    #    outpath = outpath.replace(imagename,imagename+"_resize")
     blurImage.save(outpath)
 
     OriImage.close()
@@ -63,8 +64,15 @@ def ResizeTexture(filePath,mode,w,h,outpath):
 if outPath==None:
     outPath = path
 
+pat = "(.*)\.(png||jpg)$"
+
 if os.path.isfile(path):
-    ResizeTexture(path,mode,width,height,outPath)
+   
+    (parent_path, fileName) = os.path.split(path)
+    # 进行匹配
+    matchObj = re.match(pat, fileName)
+    if matchObj!=None:
+        ResizeTexture(path,mode,width,height,outPath)
 else:
     for root, dirs, files in os.walk(path):
         print('root_dir:', root)  # 当前目录路径
@@ -76,6 +84,9 @@ else:
             fout = filePath.replace(path,outPath).replace("\\","/")
             print("filePath "+filePath)
             print("outpath "+fout)
-            ResizeTexture(filePath,mode,width,height,fout)
+            # 进行匹配
+            matchObj = re.match(pat, fileName)
+            if matchObj!=None:
+                ResizeTexture(filePath,mode,width,height,fout)
 
 print("Resize Done")

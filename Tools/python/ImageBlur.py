@@ -12,6 +12,7 @@ import sys
 import os
 import os.path
 import argparse
+import re
 
 parser = argparse.ArgumentParser(description='manual to this script')
 parser.add_argument('--path', type=str, default = None)
@@ -54,8 +55,14 @@ def BlurTexture(filePath ,sigma, outpath):
 if outPath==None:
     outPath = path
 
+pat = "(.*)\.(png||jpg)$"
+
 if os.path.isfile(path):
-    BlurTexture(path,sigma,outPath)
+    (parent_path, fileName) = os.path.split(path)
+    # 进行匹配
+    matchObj = re.match(pat, fileName)
+    if matchObj!=None:
+        BlurTexture(path,sigma,outPath)
 else:
     for root, dirs, files in os.walk(path):
         print('root_dir:', root)  # 当前目录路径
@@ -67,6 +74,9 @@ else:
             fout = filePath.replace(path,outPath).replace("\\","/")
             print("filePath "+filePath)
             print("outpath "+fout)
-            BlurTexture(filePath,sigma,fout)
+            # 进行匹配
+            matchObj = re.match(pat, fileName)
+            if matchObj!=None:
+                BlurTexture(filePath,sigma,fout)
 
 print("Blur Done")
