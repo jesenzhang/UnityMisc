@@ -51,9 +51,7 @@ else:
 
         for fileName in files:
             filePath = os.path.join(root,fileName).replace("\\","/")
-            fout = filePath.replace(path,outPath).replace("\\","/")
             print("filePath "+filePath)
-            print("outpath "+fout)
             # 进行匹配
             matchObj = re.match(pat, fileName)
             if matchObj!=None:
