@@ -1,0 +1,3151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bb8701f42d5984897bc467ffae6ec6, type: 3}
+  m_Name: emoji_lxh
+  m_EditorClassIdentifier: 
+  Id: 1
+  IsStatic: 0
+  TexSource: {fileID: 2800000, guid: ea402e87f7ff2f244b354f1aa4ed688e, type: 3}
+  Row: 21
+  Offset: {x: 5, y: -2}
+  Column: 8
+  Speed: 10
+  ListSpriteGroup:
+  - Id: 0
+    Tag: emoji_0
+    ListSpriteInfor:
+    - Id: 0
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.99903506}
+      - {x: 0.13141026, y: 0.99903506}
+      - {x: 0.13141026, y: 0.951416}
+      - {x: 0.0064102565, y: 0.951416}
+    - Id: 1
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.99903506}
+      - {x: 0.2564408, y: 0.99903506}
+      - {x: 0.2564408, y: 0.951416}
+      - {x: 0.13144079, y: 0.951416}
+    - Id: 2
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.99903506}
+      - {x: 0.3814713, y: 0.99903506}
+      - {x: 0.3814713, y: 0.951416}
+      - {x: 0.2564713, y: 0.951416}
+    - Id: 3
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.99903506}
+      - {x: 0.50650185, y: 0.99903506}
+      - {x: 0.50650185, y: 0.951416}
+      - {x: 0.38150185, y: 0.951416}
+    - Id: 4
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.99903506}
+      - {x: 0.6315324, y: 0.99903506}
+      - {x: 0.6315324, y: 0.951416}
+      - {x: 0.5065324, y: 0.951416}
+    - Id: 5
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.99903506}
+      - {x: 0.7565629, y: 0.99903506}
+      - {x: 0.7565629, y: 0.951416}
+      - {x: 0.6315629, y: 0.951416}
+    - Id: 6
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.99903506}
+      - {x: 0.88159347, y: 0.99903506}
+      - {x: 0.88159347, y: 0.951416}
+      - {x: 0.75659347, y: 0.951416}
+    - Id: 7
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1948.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.951416
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.99903506}
+      - {x: 1.006624, y: 0.99903506}
+      - {x: 1.006624, y: 0.951416}
+      - {x: 0.881624, y: 0.951416}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_1
+    ListSpriteInfor:
+    - Id: 8
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.95142764}
+      - {x: 0.13141026, y: 0.95142764}
+      - {x: 0.13141026, y: 0.9038086}
+      - {x: 0.0064102565, y: 0.9038086}
+    - Id: 9
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.95142764}
+      - {x: 0.2564408, y: 0.95142764}
+      - {x: 0.2564408, y: 0.9038086}
+      - {x: 0.13144079, y: 0.9038086}
+    - Id: 10
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.95142764}
+      - {x: 0.3814713, y: 0.95142764}
+      - {x: 0.3814713, y: 0.9038086}
+      - {x: 0.2564713, y: 0.9038086}
+    - Id: 11
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.95142764}
+      - {x: 0.50650185, y: 0.95142764}
+      - {x: 0.50650185, y: 0.9038086}
+      - {x: 0.38150185, y: 0.9038086}
+    - Id: 12
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.95142764}
+      - {x: 0.6315324, y: 0.95142764}
+      - {x: 0.6315324, y: 0.9038086}
+      - {x: 0.5065324, y: 0.9038086}
+    - Id: 13
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.95142764}
+      - {x: 0.7565629, y: 0.95142764}
+      - {x: 0.7565629, y: 0.9038086}
+      - {x: 0.6315629, y: 0.9038086}
+    - Id: 14
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.95142764}
+      - {x: 0.88159347, y: 0.95142764}
+      - {x: 0.88159347, y: 0.9038086}
+      - {x: 0.75659347, y: 0.9038086}
+    - Id: 15
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1851
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.9038086
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.95142764}
+      - {x: 1.006624, y: 0.95142764}
+      - {x: 1.006624, y: 0.9038086}
+      - {x: 0.881624, y: 0.9038086}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_2
+    ListSpriteInfor:
+    - Id: 16
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.9038202}
+      - {x: 0.13141026, y: 0.9038202}
+      - {x: 0.13141026, y: 0.8562012}
+      - {x: 0.0064102565, y: 0.8562012}
+    - Id: 17
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.9038202}
+      - {x: 0.2564408, y: 0.9038202}
+      - {x: 0.2564408, y: 0.8562012}
+      - {x: 0.13144079, y: 0.8562012}
+    - Id: 18
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.9038202}
+      - {x: 0.3814713, y: 0.9038202}
+      - {x: 0.3814713, y: 0.8562012}
+      - {x: 0.2564713, y: 0.8562012}
+    - Id: 19
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.9038202}
+      - {x: 0.50650185, y: 0.9038202}
+      - {x: 0.50650185, y: 0.8562012}
+      - {x: 0.38150185, y: 0.8562012}
+    - Id: 20
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.9038202}
+      - {x: 0.6315324, y: 0.9038202}
+      - {x: 0.6315324, y: 0.8562012}
+      - {x: 0.5065324, y: 0.8562012}
+    - Id: 21
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.9038202}
+      - {x: 0.7565629, y: 0.9038202}
+      - {x: 0.7565629, y: 0.8562012}
+      - {x: 0.6315629, y: 0.8562012}
+    - Id: 22
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.9038202}
+      - {x: 0.88159347, y: 0.9038202}
+      - {x: 0.88159347, y: 0.8562012}
+      - {x: 0.75659347, y: 0.8562012}
+    - Id: 23
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1753.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.8562012
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.9038202}
+      - {x: 1.006624, y: 0.9038202}
+      - {x: 1.006624, y: 0.8562012}
+      - {x: 0.881624, y: 0.8562012}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_3
+    ListSpriteInfor:
+    - Id: 24
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.8562128}
+      - {x: 0.13141026, y: 0.8562128}
+      - {x: 0.13141026, y: 0.80859375}
+      - {x: 0.0064102565, y: 0.80859375}
+    - Id: 25
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.8562128}
+      - {x: 0.2564408, y: 0.8562128}
+      - {x: 0.2564408, y: 0.80859375}
+      - {x: 0.13144079, y: 0.80859375}
+    - Id: 26
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.8562128}
+      - {x: 0.3814713, y: 0.8562128}
+      - {x: 0.3814713, y: 0.80859375}
+      - {x: 0.2564713, y: 0.80859375}
+    - Id: 27
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.8562128}
+      - {x: 0.50650185, y: 0.8562128}
+      - {x: 0.50650185, y: 0.80859375}
+      - {x: 0.38150185, y: 0.80859375}
+    - Id: 28
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.8562128}
+      - {x: 0.6315324, y: 0.8562128}
+      - {x: 0.6315324, y: 0.80859375}
+      - {x: 0.5065324, y: 0.80859375}
+    - Id: 29
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.8562128}
+      - {x: 0.7565629, y: 0.8562128}
+      - {x: 0.7565629, y: 0.80859375}
+      - {x: 0.6315629, y: 0.80859375}
+    - Id: 30
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.8562128}
+      - {x: 0.88159347, y: 0.8562128}
+      - {x: 0.88159347, y: 0.80859375}
+      - {x: 0.75659347, y: 0.80859375}
+    - Id: 31
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1656
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.80859375
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.8562128}
+      - {x: 1.006624, y: 0.8562128}
+      - {x: 1.006624, y: 0.80859375}
+      - {x: 0.881624, y: 0.80859375}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_4
+    ListSpriteInfor:
+    - Id: 32
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.8086054}
+      - {x: 0.13141026, y: 0.8086054}
+      - {x: 0.13141026, y: 0.7609863}
+      - {x: 0.0064102565, y: 0.7609863}
+    - Id: 33
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.8086054}
+      - {x: 0.2564408, y: 0.8086054}
+      - {x: 0.2564408, y: 0.7609863}
+      - {x: 0.13144079, y: 0.7609863}
+    - Id: 34
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.8086054}
+      - {x: 0.3814713, y: 0.8086054}
+      - {x: 0.3814713, y: 0.7609863}
+      - {x: 0.2564713, y: 0.7609863}
+    - Id: 35
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.8086054}
+      - {x: 0.50650185, y: 0.8086054}
+      - {x: 0.50650185, y: 0.7609863}
+      - {x: 0.38150185, y: 0.7609863}
+    - Id: 36
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.8086054}
+      - {x: 0.6315324, y: 0.8086054}
+      - {x: 0.6315324, y: 0.7609863}
+      - {x: 0.5065324, y: 0.7609863}
+    - Id: 37
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.8086054}
+      - {x: 0.7565629, y: 0.8086054}
+      - {x: 0.7565629, y: 0.7609863}
+      - {x: 0.6315629, y: 0.7609863}
+    - Id: 38
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.8086054}
+      - {x: 0.88159347, y: 0.8086054}
+      - {x: 0.88159347, y: 0.7609863}
+      - {x: 0.75659347, y: 0.7609863}
+    - Id: 39
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1558.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.7609863
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.8086054}
+      - {x: 1.006624, y: 0.8086054}
+      - {x: 1.006624, y: 0.7609863}
+      - {x: 0.881624, y: 0.7609863}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_5
+    ListSpriteInfor:
+    - Id: 40
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.76099795}
+      - {x: 0.13141026, y: 0.76099795}
+      - {x: 0.13141026, y: 0.7133789}
+      - {x: 0.0064102565, y: 0.7133789}
+    - Id: 41
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.76099795}
+      - {x: 0.2564408, y: 0.76099795}
+      - {x: 0.2564408, y: 0.7133789}
+      - {x: 0.13144079, y: 0.7133789}
+    - Id: 42
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.76099795}
+      - {x: 0.3814713, y: 0.76099795}
+      - {x: 0.3814713, y: 0.7133789}
+      - {x: 0.2564713, y: 0.7133789}
+    - Id: 43
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.76099795}
+      - {x: 0.50650185, y: 0.76099795}
+      - {x: 0.50650185, y: 0.7133789}
+      - {x: 0.38150185, y: 0.7133789}
+    - Id: 44
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.76099795}
+      - {x: 0.6315324, y: 0.76099795}
+      - {x: 0.6315324, y: 0.7133789}
+      - {x: 0.5065324, y: 0.7133789}
+    - Id: 45
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.76099795}
+      - {x: 0.7565629, y: 0.76099795}
+      - {x: 0.7565629, y: 0.7133789}
+      - {x: 0.6315629, y: 0.7133789}
+    - Id: 46
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.76099795}
+      - {x: 0.88159347, y: 0.76099795}
+      - {x: 0.88159347, y: 0.7133789}
+      - {x: 0.75659347, y: 0.7133789}
+    - Id: 47
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1461
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.7133789
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.76099795}
+      - {x: 1.006624, y: 0.76099795}
+      - {x: 1.006624, y: 0.7133789}
+      - {x: 0.881624, y: 0.7133789}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_6
+    ListSpriteInfor:
+    - Id: 48
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.7133905}
+      - {x: 0.13141026, y: 0.7133905}
+      - {x: 0.13141026, y: 0.6657715}
+      - {x: 0.0064102565, y: 0.6657715}
+    - Id: 49
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.7133905}
+      - {x: 0.2564408, y: 0.7133905}
+      - {x: 0.2564408, y: 0.6657715}
+      - {x: 0.13144079, y: 0.6657715}
+    - Id: 50
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.7133905}
+      - {x: 0.3814713, y: 0.7133905}
+      - {x: 0.3814713, y: 0.6657715}
+      - {x: 0.2564713, y: 0.6657715}
+    - Id: 51
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.7133905}
+      - {x: 0.50650185, y: 0.7133905}
+      - {x: 0.50650185, y: 0.6657715}
+      - {x: 0.38150185, y: 0.6657715}
+    - Id: 52
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.7133905}
+      - {x: 0.6315324, y: 0.7133905}
+      - {x: 0.6315324, y: 0.6657715}
+      - {x: 0.5065324, y: 0.6657715}
+    - Id: 53
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.7133905}
+      - {x: 0.7565629, y: 0.7133905}
+      - {x: 0.7565629, y: 0.6657715}
+      - {x: 0.6315629, y: 0.6657715}
+    - Id: 54
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.7133905}
+      - {x: 0.88159347, y: 0.7133905}
+      - {x: 0.88159347, y: 0.6657715}
+      - {x: 0.75659347, y: 0.6657715}
+    - Id: 55
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1363.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.6657715
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.7133905}
+      - {x: 1.006624, y: 0.7133905}
+      - {x: 1.006624, y: 0.6657715}
+      - {x: 0.881624, y: 0.6657715}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_7
+    ListSpriteInfor:
+    - Id: 56
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.6657831}
+      - {x: 0.13141026, y: 0.6657831}
+      - {x: 0.13141026, y: 0.61816406}
+      - {x: 0.0064102565, y: 0.61816406}
+    - Id: 57
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.6657831}
+      - {x: 0.2564408, y: 0.6657831}
+      - {x: 0.2564408, y: 0.61816406}
+      - {x: 0.13144079, y: 0.61816406}
+    - Id: 58
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.6657831}
+      - {x: 0.3814713, y: 0.6657831}
+      - {x: 0.3814713, y: 0.61816406}
+      - {x: 0.2564713, y: 0.61816406}
+    - Id: 59
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.6657831}
+      - {x: 0.50650185, y: 0.6657831}
+      - {x: 0.50650185, y: 0.61816406}
+      - {x: 0.38150185, y: 0.61816406}
+    - Id: 60
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.6657831}
+      - {x: 0.6315324, y: 0.6657831}
+      - {x: 0.6315324, y: 0.61816406}
+      - {x: 0.5065324, y: 0.61816406}
+    - Id: 61
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.6657831}
+      - {x: 0.7565629, y: 0.6657831}
+      - {x: 0.7565629, y: 0.61816406}
+      - {x: 0.6315629, y: 0.61816406}
+    - Id: 62
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.6657831}
+      - {x: 0.88159347, y: 0.6657831}
+      - {x: 0.88159347, y: 0.61816406}
+      - {x: 0.75659347, y: 0.61816406}
+    - Id: 63
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1266
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.61816406
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.6657831}
+      - {x: 1.006624, y: 0.6657831}
+      - {x: 1.006624, y: 0.61816406}
+      - {x: 0.881624, y: 0.61816406}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_8
+    ListSpriteInfor:
+    - Id: 64
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.6181757}
+      - {x: 0.13141026, y: 0.6181757}
+      - {x: 0.13141026, y: 0.57055664}
+      - {x: 0.0064102565, y: 0.57055664}
+    - Id: 65
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.6181757}
+      - {x: 0.2564408, y: 0.6181757}
+      - {x: 0.2564408, y: 0.57055664}
+      - {x: 0.13144079, y: 0.57055664}
+    - Id: 66
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.6181757}
+      - {x: 0.3814713, y: 0.6181757}
+      - {x: 0.3814713, y: 0.57055664}
+      - {x: 0.2564713, y: 0.57055664}
+    - Id: 67
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.6181757}
+      - {x: 0.50650185, y: 0.6181757}
+      - {x: 0.50650185, y: 0.57055664}
+      - {x: 0.38150185, y: 0.57055664}
+    - Id: 68
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.6181757}
+      - {x: 0.6315324, y: 0.6181757}
+      - {x: 0.6315324, y: 0.57055664}
+      - {x: 0.5065324, y: 0.57055664}
+    - Id: 69
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.6181757}
+      - {x: 0.7565629, y: 0.6181757}
+      - {x: 0.7565629, y: 0.57055664}
+      - {x: 0.6315629, y: 0.57055664}
+    - Id: 70
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.6181757}
+      - {x: 0.88159347, y: 0.6181757}
+      - {x: 0.88159347, y: 0.57055664}
+      - {x: 0.75659347, y: 0.57055664}
+    - Id: 71
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1168.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.57055664
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.6181757}
+      - {x: 1.006624, y: 0.6181757}
+      - {x: 1.006624, y: 0.57055664}
+      - {x: 0.881624, y: 0.57055664}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_9
+    ListSpriteInfor:
+    - Id: 72
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.57056826}
+      - {x: 0.13141026, y: 0.57056826}
+      - {x: 0.13141026, y: 0.5229492}
+      - {x: 0.0064102565, y: 0.5229492}
+    - Id: 73
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.57056826}
+      - {x: 0.2564408, y: 0.57056826}
+      - {x: 0.2564408, y: 0.5229492}
+      - {x: 0.13144079, y: 0.5229492}
+    - Id: 74
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.57056826}
+      - {x: 0.3814713, y: 0.57056826}
+      - {x: 0.3814713, y: 0.5229492}
+      - {x: 0.2564713, y: 0.5229492}
+    - Id: 75
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.57056826}
+      - {x: 0.50650185, y: 0.57056826}
+      - {x: 0.50650185, y: 0.5229492}
+      - {x: 0.38150185, y: 0.5229492}
+    - Id: 76
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.57056826}
+      - {x: 0.6315324, y: 0.57056826}
+      - {x: 0.6315324, y: 0.5229492}
+      - {x: 0.5065324, y: 0.5229492}
+    - Id: 77
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.57056826}
+      - {x: 0.7565629, y: 0.57056826}
+      - {x: 0.7565629, y: 0.5229492}
+      - {x: 0.6315629, y: 0.5229492}
+    - Id: 78
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.57056826}
+      - {x: 0.88159347, y: 0.57056826}
+      - {x: 0.88159347, y: 0.5229492}
+      - {x: 0.75659347, y: 0.5229492}
+    - Id: 79
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 1071
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.5229492
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.57056826}
+      - {x: 1.006624, y: 0.57056826}
+      - {x: 1.006624, y: 0.5229492}
+      - {x: 0.881624, y: 0.5229492}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_10
+    ListSpriteInfor:
+    - Id: 80
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.52296084}
+      - {x: 0.13141026, y: 0.52296084}
+      - {x: 0.13141026, y: 0.4753418}
+      - {x: 0.0064102565, y: 0.4753418}
+    - Id: 81
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.52296084}
+      - {x: 0.2564408, y: 0.52296084}
+      - {x: 0.2564408, y: 0.4753418}
+      - {x: 0.13144079, y: 0.4753418}
+    - Id: 82
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.52296084}
+      - {x: 0.3814713, y: 0.52296084}
+      - {x: 0.3814713, y: 0.4753418}
+      - {x: 0.2564713, y: 0.4753418}
+    - Id: 83
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.52296084}
+      - {x: 0.50650185, y: 0.52296084}
+      - {x: 0.50650185, y: 0.4753418}
+      - {x: 0.38150185, y: 0.4753418}
+    - Id: 84
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.52296084}
+      - {x: 0.6315324, y: 0.52296084}
+      - {x: 0.6315324, y: 0.4753418}
+      - {x: 0.5065324, y: 0.4753418}
+    - Id: 85
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.52296084}
+      - {x: 0.7565629, y: 0.52296084}
+      - {x: 0.7565629, y: 0.4753418}
+      - {x: 0.6315629, y: 0.4753418}
+    - Id: 86
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.52296084}
+      - {x: 0.88159347, y: 0.52296084}
+      - {x: 0.88159347, y: 0.4753418}
+      - {x: 0.75659347, y: 0.4753418}
+    - Id: 87
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 973.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.4753418
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.52296084}
+      - {x: 1.006624, y: 0.52296084}
+      - {x: 1.006624, y: 0.4753418}
+      - {x: 0.881624, y: 0.4753418}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_11
+    ListSpriteInfor:
+    - Id: 88
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.47535342}
+      - {x: 0.13141026, y: 0.47535342}
+      - {x: 0.13141026, y: 0.42773438}
+      - {x: 0.0064102565, y: 0.42773438}
+    - Id: 89
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.47535342}
+      - {x: 0.2564408, y: 0.47535342}
+      - {x: 0.2564408, y: 0.42773438}
+      - {x: 0.13144079, y: 0.42773438}
+    - Id: 90
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.47535342}
+      - {x: 0.3814713, y: 0.47535342}
+      - {x: 0.3814713, y: 0.42773438}
+      - {x: 0.2564713, y: 0.42773438}
+    - Id: 91
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.47535342}
+      - {x: 0.50650185, y: 0.47535342}
+      - {x: 0.50650185, y: 0.42773438}
+      - {x: 0.38150185, y: 0.42773438}
+    - Id: 92
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.47535342}
+      - {x: 0.6315324, y: 0.47535342}
+      - {x: 0.6315324, y: 0.42773438}
+      - {x: 0.5065324, y: 0.42773438}
+    - Id: 93
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.47535342}
+      - {x: 0.7565629, y: 0.47535342}
+      - {x: 0.7565629, y: 0.42773438}
+      - {x: 0.6315629, y: 0.42773438}
+    - Id: 94
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.47535342}
+      - {x: 0.88159347, y: 0.47535342}
+      - {x: 0.88159347, y: 0.42773438}
+      - {x: 0.75659347, y: 0.42773438}
+    - Id: 95
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 876
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.42773438
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.47535342}
+      - {x: 1.006624, y: 0.47535342}
+      - {x: 1.006624, y: 0.42773438}
+      - {x: 0.881624, y: 0.42773438}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_12
+    ListSpriteInfor:
+    - Id: 96
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.427746}
+      - {x: 0.13141026, y: 0.427746}
+      - {x: 0.13141026, y: 0.38012695}
+      - {x: 0.0064102565, y: 0.38012695}
+    - Id: 97
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.427746}
+      - {x: 0.2564408, y: 0.427746}
+      - {x: 0.2564408, y: 0.38012695}
+      - {x: 0.13144079, y: 0.38012695}
+    - Id: 98
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.427746}
+      - {x: 0.3814713, y: 0.427746}
+      - {x: 0.3814713, y: 0.38012695}
+      - {x: 0.2564713, y: 0.38012695}
+    - Id: 99
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.427746}
+      - {x: 0.50650185, y: 0.427746}
+      - {x: 0.50650185, y: 0.38012695}
+      - {x: 0.38150185, y: 0.38012695}
+    - Id: 100
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.427746}
+      - {x: 0.6315324, y: 0.427746}
+      - {x: 0.6315324, y: 0.38012695}
+      - {x: 0.5065324, y: 0.38012695}
+    - Id: 101
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.427746}
+      - {x: 0.7565629, y: 0.427746}
+      - {x: 0.7565629, y: 0.38012695}
+      - {x: 0.6315629, y: 0.38012695}
+    - Id: 102
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.427746}
+      - {x: 0.88159347, y: 0.427746}
+      - {x: 0.88159347, y: 0.38012695}
+      - {x: 0.75659347, y: 0.38012695}
+    - Id: 103
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 778.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.38012695
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.427746}
+      - {x: 1.006624, y: 0.427746}
+      - {x: 1.006624, y: 0.38012695}
+      - {x: 0.881624, y: 0.38012695}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_13
+    ListSpriteInfor:
+    - Id: 104
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.38013858}
+      - {x: 0.13141026, y: 0.38013858}
+      - {x: 0.13141026, y: 0.33251953}
+      - {x: 0.0064102565, y: 0.33251953}
+    - Id: 105
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.38013858}
+      - {x: 0.2564408, y: 0.38013858}
+      - {x: 0.2564408, y: 0.33251953}
+      - {x: 0.13144079, y: 0.33251953}
+    - Id: 106
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.38013858}
+      - {x: 0.3814713, y: 0.38013858}
+      - {x: 0.3814713, y: 0.33251953}
+      - {x: 0.2564713, y: 0.33251953}
+    - Id: 107
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.38013858}
+      - {x: 0.50650185, y: 0.38013858}
+      - {x: 0.50650185, y: 0.33251953}
+      - {x: 0.38150185, y: 0.33251953}
+    - Id: 108
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.38013858}
+      - {x: 0.6315324, y: 0.38013858}
+      - {x: 0.6315324, y: 0.33251953}
+      - {x: 0.5065324, y: 0.33251953}
+    - Id: 109
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.38013858}
+      - {x: 0.7565629, y: 0.38013858}
+      - {x: 0.7565629, y: 0.33251953}
+      - {x: 0.6315629, y: 0.33251953}
+    - Id: 110
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.38013858}
+      - {x: 0.88159347, y: 0.38013858}
+      - {x: 0.88159347, y: 0.33251953}
+      - {x: 0.75659347, y: 0.33251953}
+    - Id: 111
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 681
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.33251953
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.38013858}
+      - {x: 1.006624, y: 0.38013858}
+      - {x: 1.006624, y: 0.33251953}
+      - {x: 0.881624, y: 0.33251953}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_14
+    ListSpriteInfor:
+    - Id: 112
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.33253115}
+      - {x: 0.13141026, y: 0.33253115}
+      - {x: 0.13141026, y: 0.2849121}
+      - {x: 0.0064102565, y: 0.2849121}
+    - Id: 113
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.33253115}
+      - {x: 0.2564408, y: 0.33253115}
+      - {x: 0.2564408, y: 0.2849121}
+      - {x: 0.13144079, y: 0.2849121}
+    - Id: 114
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.33253115}
+      - {x: 0.3814713, y: 0.33253115}
+      - {x: 0.3814713, y: 0.2849121}
+      - {x: 0.2564713, y: 0.2849121}
+    - Id: 115
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.33253115}
+      - {x: 0.50650185, y: 0.33253115}
+      - {x: 0.50650185, y: 0.2849121}
+      - {x: 0.38150185, y: 0.2849121}
+    - Id: 116
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.33253115}
+      - {x: 0.6315324, y: 0.33253115}
+      - {x: 0.6315324, y: 0.2849121}
+      - {x: 0.5065324, y: 0.2849121}
+    - Id: 117
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.33253115}
+      - {x: 0.7565629, y: 0.33253115}
+      - {x: 0.7565629, y: 0.2849121}
+      - {x: 0.6315629, y: 0.2849121}
+    - Id: 118
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.33253115}
+      - {x: 0.88159347, y: 0.33253115}
+      - {x: 0.88159347, y: 0.2849121}
+      - {x: 0.75659347, y: 0.2849121}
+    - Id: 119
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 583.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.2849121
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.33253115}
+      - {x: 1.006624, y: 0.33253115}
+      - {x: 1.006624, y: 0.2849121}
+      - {x: 0.881624, y: 0.2849121}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_15
+    ListSpriteInfor:
+    - Id: 120
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.28492373}
+      - {x: 0.13141026, y: 0.28492373}
+      - {x: 0.13141026, y: 0.23730469}
+      - {x: 0.0064102565, y: 0.23730469}
+    - Id: 121
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.28492373}
+      - {x: 0.2564408, y: 0.28492373}
+      - {x: 0.2564408, y: 0.23730469}
+      - {x: 0.13144079, y: 0.23730469}
+    - Id: 122
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.28492373}
+      - {x: 0.3814713, y: 0.28492373}
+      - {x: 0.3814713, y: 0.23730469}
+      - {x: 0.2564713, y: 0.23730469}
+    - Id: 123
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.28492373}
+      - {x: 0.50650185, y: 0.28492373}
+      - {x: 0.50650185, y: 0.23730469}
+      - {x: 0.38150185, y: 0.23730469}
+    - Id: 124
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.28492373}
+      - {x: 0.6315324, y: 0.28492373}
+      - {x: 0.6315324, y: 0.23730469}
+      - {x: 0.5065324, y: 0.23730469}
+    - Id: 125
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.28492373}
+      - {x: 0.7565629, y: 0.28492373}
+      - {x: 0.7565629, y: 0.23730469}
+      - {x: 0.6315629, y: 0.23730469}
+    - Id: 126
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.28492373}
+      - {x: 0.88159347, y: 0.28492373}
+      - {x: 0.88159347, y: 0.23730469}
+      - {x: 0.75659347, y: 0.23730469}
+    - Id: 127
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 486
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.23730469
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.28492373}
+      - {x: 1.006624, y: 0.28492373}
+      - {x: 1.006624, y: 0.23730469}
+      - {x: 0.881624, y: 0.23730469}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_16
+    ListSpriteInfor:
+    - Id: 128
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.23731631}
+      - {x: 0.13141026, y: 0.23731631}
+      - {x: 0.13141026, y: 0.18969727}
+      - {x: 0.0064102565, y: 0.18969727}
+    - Id: 129
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.23731631}
+      - {x: 0.2564408, y: 0.23731631}
+      - {x: 0.2564408, y: 0.18969727}
+      - {x: 0.13144079, y: 0.18969727}
+    - Id: 130
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.23731631}
+      - {x: 0.3814713, y: 0.23731631}
+      - {x: 0.3814713, y: 0.18969727}
+      - {x: 0.2564713, y: 0.18969727}
+    - Id: 131
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.23731631}
+      - {x: 0.50650185, y: 0.23731631}
+      - {x: 0.50650185, y: 0.18969727}
+      - {x: 0.38150185, y: 0.18969727}
+    - Id: 132
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.23731631}
+      - {x: 0.6315324, y: 0.23731631}
+      - {x: 0.6315324, y: 0.18969727}
+      - {x: 0.5065324, y: 0.18969727}
+    - Id: 133
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.23731631}
+      - {x: 0.7565629, y: 0.23731631}
+      - {x: 0.7565629, y: 0.18969727}
+      - {x: 0.6315629, y: 0.18969727}
+    - Id: 134
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.23731631}
+      - {x: 0.88159347, y: 0.23731631}
+      - {x: 0.88159347, y: 0.18969727}
+      - {x: 0.75659347, y: 0.18969727}
+    - Id: 135
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 388.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.18969727
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.23731631}
+      - {x: 1.006624, y: 0.23731631}
+      - {x: 1.006624, y: 0.18969727}
+      - {x: 0.881624, y: 0.18969727}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_17
+    ListSpriteInfor:
+    - Id: 136
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.18970889}
+      - {x: 0.13141026, y: 0.18970889}
+      - {x: 0.13141026, y: 0.14208984}
+      - {x: 0.0064102565, y: 0.14208984}
+    - Id: 137
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.18970889}
+      - {x: 0.2564408, y: 0.18970889}
+      - {x: 0.2564408, y: 0.14208984}
+      - {x: 0.13144079, y: 0.14208984}
+    - Id: 138
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.18970889}
+      - {x: 0.3814713, y: 0.18970889}
+      - {x: 0.3814713, y: 0.14208984}
+      - {x: 0.2564713, y: 0.14208984}
+    - Id: 139
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.18970889}
+      - {x: 0.50650185, y: 0.18970889}
+      - {x: 0.50650185, y: 0.14208984}
+      - {x: 0.38150185, y: 0.14208984}
+    - Id: 140
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.18970889}
+      - {x: 0.6315324, y: 0.18970889}
+      - {x: 0.6315324, y: 0.14208984}
+      - {x: 0.5065324, y: 0.14208984}
+    - Id: 141
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.18970889}
+      - {x: 0.7565629, y: 0.18970889}
+      - {x: 0.7565629, y: 0.14208984}
+      - {x: 0.6315629, y: 0.14208984}
+    - Id: 142
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.18970889}
+      - {x: 0.88159347, y: 0.18970889}
+      - {x: 0.88159347, y: 0.14208984}
+      - {x: 0.75659347, y: 0.14208984}
+    - Id: 143
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 291
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.14208984
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.18970889}
+      - {x: 1.006624, y: 0.18970889}
+      - {x: 1.006624, y: 0.14208984}
+      - {x: 0.881624, y: 0.14208984}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_18
+    ListSpriteInfor:
+    - Id: 144
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.14210147}
+      - {x: 0.13141026, y: 0.14210147}
+      - {x: 0.13141026, y: 0.09448242}
+      - {x: 0.0064102565, y: 0.09448242}
+    - Id: 145
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.14210147}
+      - {x: 0.2564408, y: 0.14210147}
+      - {x: 0.2564408, y: 0.09448242}
+      - {x: 0.13144079, y: 0.09448242}
+    - Id: 146
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.14210147}
+      - {x: 0.3814713, y: 0.14210147}
+      - {x: 0.3814713, y: 0.09448242}
+      - {x: 0.2564713, y: 0.09448242}
+    - Id: 147
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.14210147}
+      - {x: 0.50650185, y: 0.14210147}
+      - {x: 0.50650185, y: 0.09448242}
+      - {x: 0.38150185, y: 0.09448242}
+    - Id: 148
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.14210147}
+      - {x: 0.6315324, y: 0.14210147}
+      - {x: 0.6315324, y: 0.09448242}
+      - {x: 0.5065324, y: 0.09448242}
+    - Id: 149
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.14210147}
+      - {x: 0.7565629, y: 0.14210147}
+      - {x: 0.7565629, y: 0.09448242}
+      - {x: 0.6315629, y: 0.09448242}
+    - Id: 150
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.14210147}
+      - {x: 0.88159347, y: 0.14210147}
+      - {x: 0.88159347, y: 0.09448242}
+      - {x: 0.75659347, y: 0.09448242}
+    - Id: 151
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 193.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.09448242
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.14210147}
+      - {x: 1.006624, y: 0.14210147}
+      - {x: 1.006624, y: 0.09448242}
+      - {x: 0.881624, y: 0.09448242}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_19
+    ListSpriteInfor:
+    - Id: 152
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.094494045}
+      - {x: 0.13141026, y: 0.094494045}
+      - {x: 0.13141026, y: 0.046875}
+      - {x: 0.0064102565, y: 0.046875}
+    - Id: 153
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.094494045}
+      - {x: 0.2564408, y: 0.094494045}
+      - {x: 0.2564408, y: 0.046875}
+      - {x: 0.13144079, y: 0.046875}
+    - Id: 154
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.094494045}
+      - {x: 0.3814713, y: 0.094494045}
+      - {x: 0.3814713, y: 0.046875}
+      - {x: 0.2564713, y: 0.046875}
+    - Id: 155
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.094494045}
+      - {x: 0.50650185, y: 0.094494045}
+      - {x: 0.50650185, y: 0.046875}
+      - {x: 0.38150185, y: 0.046875}
+    - Id: 156
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.094494045}
+      - {x: 0.6315324, y: 0.094494045}
+      - {x: 0.6315324, y: 0.046875}
+      - {x: 0.5065324, y: 0.046875}
+    - Id: 157
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.094494045}
+      - {x: 0.7565629, y: 0.094494045}
+      - {x: 0.7565629, y: 0.046875}
+      - {x: 0.6315629, y: 0.046875}
+    - Id: 158
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.094494045}
+      - {x: 0.88159347, y: 0.094494045}
+      - {x: 0.88159347, y: 0.046875}
+      - {x: 0.75659347, y: 0.046875}
+    - Id: 159
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: 96
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: 0.046875
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.094494045}
+      - {x: 1.006624, y: 0.094494045}
+      - {x: 1.006624, y: 0.046875}
+      - {x: 0.881624, y: 0.046875}
+    Width: 1
+    Size: 24
+  - Id: 0
+    Tag: emoji_20
+    ListSpriteInfor:
+    - Id: 160
+      Rect:
+        serializedVersion: 2
+        x: 5
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.0064102565
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.0064102565, y: 0.046886627}
+      - {x: 0.13141026, y: 0.046886627}
+      - {x: 0.13141026, y: -0.0007324219}
+      - {x: 0.0064102565, y: -0.0007324219}
+    - Id: 161
+      Rect:
+        serializedVersion: 2
+        x: 102.52381
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.13144079
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.13144079, y: 0.046886627}
+      - {x: 0.2564408, y: 0.046886627}
+      - {x: 0.2564408, y: -0.0007324219}
+      - {x: 0.13144079, y: -0.0007324219}
+    - Id: 162
+      Rect:
+        serializedVersion: 2
+        x: 200.04762
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.2564713
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.2564713, y: 0.046886627}
+      - {x: 0.3814713, y: 0.046886627}
+      - {x: 0.3814713, y: -0.0007324219}
+      - {x: 0.2564713, y: -0.0007324219}
+    - Id: 163
+      Rect:
+        serializedVersion: 2
+        x: 297.57144
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.38150185
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.38150185, y: 0.046886627}
+      - {x: 0.50650185, y: 0.046886627}
+      - {x: 0.50650185, y: -0.0007324219}
+      - {x: 0.38150185, y: -0.0007324219}
+    - Id: 164
+      Rect:
+        serializedVersion: 2
+        x: 395.09525
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.5065324
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.5065324, y: 0.046886627}
+      - {x: 0.6315324, y: 0.046886627}
+      - {x: 0.6315324, y: -0.0007324219}
+      - {x: 0.5065324, y: -0.0007324219}
+    - Id: 165
+      Rect:
+        serializedVersion: 2
+        x: 492.61905
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.6315629
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.6315629, y: 0.046886627}
+      - {x: 0.7565629, y: 0.046886627}
+      - {x: 0.7565629, y: -0.0007324219}
+      - {x: 0.6315629, y: -0.0007324219}
+    - Id: 166
+      Rect:
+        serializedVersion: 2
+        x: 590.1429
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.75659347
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.75659347, y: 0.046886627}
+      - {x: 0.88159347, y: 0.046886627}
+      - {x: 0.88159347, y: -0.0007324219}
+      - {x: 0.75659347, y: -0.0007324219}
+    - Id: 167
+      Rect:
+        serializedVersion: 2
+        x: 687.6667
+        y: -1.5
+        width: 97.5
+        height: 97.52381
+      DrawTexCoord:
+        serializedVersion: 2
+        x: 0.881624
+        y: -0.0007324219
+        width: 0.125
+        height: 0.04761905
+      Uv:
+      - {x: 0.881624, y: 0.046886627}
+      - {x: 1.006624, y: 0.046886627}
+      - {x: 1.006624, y: -0.0007324219}
+      - {x: 0.881624, y: -0.0007324219}
+    Width: 1
+    Size: 24
