@@ -16,16 +16,21 @@ import zipfile #引入zip管理模块
 
 #定义一个函数，递归读取absDir文件夹中所有文件，并塞进zipFile文件中。参数absDir表示文件夹的绝对路径。
 def writeAllFileToZip(absDir,zip):
-    os.chdir(absDir)
-    for f in os.listdir(absDir):
-        absFile=os.path.join(absDir,f) #子文件的绝对路径
-        if os.path.isdir(absFile): #判断是文件夹，继续深度读取。
-            relFile=absFile[len(os.getcwd())+1:] #改成相对路径，否则解压zip是/User/xxx开头的文件。
-            zip.write(relFile) #在zip文件中创建文件夹
-            writeAllFileToZip(absFile,zip) #递归操作
-        else: #判断是普通文件，直接写到zip文件中。
-            relFile=absFile[len(os.getcwd())+1:] #改成相对路径
-            zip.write(relFile)
+    (directory, childDir) = os.path.split(absDir)
+    print('directory:', directory)
+    print('childDir:', childDir)
+    os.chdir(directory)
+    zip.write(childDir)
+
+    for root, dirs, files in os.walk(absDir):
+        print('root_dir:', root)  # 当前目录路径
+        print('sub_dirs:', dirs)  # 当前路径下所有子目录
+        print('files:', files)  # 当前路径下所有非目录子文件
+        root = root.replace("\\","/")
+        for fileName in files:
+            childDir= root[len(directory)+1:]#改成相对路径，否则解压zip是/User/xxx开头的文件。
+            print('fileName:', fileName)
+            zip.write(childDir+"/"+fileName)
     return
 
 def writeFileToZip(filePath,zip):
@@ -52,6 +57,7 @@ outPath = args.out.replace("\\","/")
 
 print('path:', path)
 print('outPath:', outPath)
+
 
 if outPath==path:
     if os.path.isfile(path):
